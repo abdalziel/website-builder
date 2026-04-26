@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-rust: #C4442B;
+  --color-rust-dark: #A33820;
+  --color-rust-light: #E05A3A;
+  --color-canyon: #1C1208;
+  --color-canyon-mid: #2D1E10;
+  --color-sandstone: #E8D0A0;
+  --color-sandstone-light: #FAF3E0;
+  --color-stone: #8B7355;
+  --color-stone-light: #B09070;
+  --color-sky: #4A8FA8;
+  --color-cream: #FAF7F2;
+  --color-charcoal: #2C2420;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-canyon);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.animate-scroll-left {
+  animation: scrollLeft 30s linear infinite;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }

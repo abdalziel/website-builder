@@ -1,0 +1,209 @@
+=====================================================
+  BLAIR'S WEB DESIGN SERVICE — SCALING PLAN
+=====================================================
+
+OVERVIEW
+---------
+Turn the work done on Elevated Apartment Locating into
+a repeatable service business. Build once, deploy fast,
+own the infrastructure, collect monthly retainers.
+
+The model: you own all the accounts. Clients pay a
+setup fee + monthly retainer. They get a login and
+a one-step DNS instruction. Nothing else required
+from them.
+
+
+-----------------------------------------------------
+INFRASTRUCTURE (YOUR ACCOUNTS — ONE TIME SETUP)
+-----------------------------------------------------
+
+VERCEL PRO — $20/mo
+  - Hosts all client sites under one account
+  - Unlimited projects, custom domains per client
+  - Auto-deploys when code is updated
+  - Sign up: vercel.com
+
+GITHUB (FREE or Team)
+  - One organization, one private repo per client
+  - Code lives here, Vercel pulls from it
+  - Clients never touch this
+
+RESEND (FREE to start)
+  - Handles contact form emails for all clients
+  - Configure each client's "from" address separately
+  - Free tier: 3,000 emails/mo (upgrade if needed)
+  - Sign up: resend.com
+
+SANITY (FREE per project)
+  - One organization, one project per client
+  - You create a login for each client
+  - Clients use this to manage reviews, content, etc.
+  - Sign up: sanity.io
+
+YOUR COSTS AT SCALE
+  1-5 clients:    ~$20/mo (Vercel Pro)
+  6-20 clients:   ~$30/mo (Vercel Pro + Resend upgrade)
+  20+ clients:    ~$50/mo (scale Resend as needed)
+  Margin is strong at any size.
+
+
+-----------------------------------------------------
+PRICING MODEL
+-----------------------------------------------------
+
+SETUP FEE (one-time)
+  Basic site (template-based):     $500 – $800
+  Custom design:                   $1,000 – $2,000
+  Complex features (booking, etc): $2,000 – $3,500
+
+MONTHLY RETAINER
+  Basic hosting + support:         $75 – $100/mo
+  Hosting + content updates:       $100 – $150/mo
+  Full management:                 $150 – $250/mo
+
+EXAMPLE: 10 clients at $100/mo = $1,000/mo recurring
+  Your costs: ~$30/mo
+  Net: ~$970/mo passive after setup
+
+
+-----------------------------------------------------
+CLIENT EXPERIENCE (WHAT THEY ACTUALLY DO)
+-----------------------------------------------------
+Clients do exactly two things:
+
+  1. SIGN + PAY
+     Contract and setup fee. Everything else is on you.
+
+  2. ADD ONE DNS RECORD
+     You send them a single screenshot specific to their
+     registrar (GoDaddy, Squarespace, etc.) with an arrow
+     pointing to exactly where to click and what to paste.
+     Most people can do this in under 5 minutes.
+
+  3. RECEIVE LOGIN CREDENTIALS
+     You email them their Sanity dashboard login.
+     They can add/edit reviews, testimonials, etc.
+     No technical knowledge needed.
+
+That's it. They never hear about GitHub, Vercel,
+Resend, API keys, or any of it.
+
+
+-----------------------------------------------------
+THE TEMPLATE SYSTEM
+-----------------------------------------------------
+The apartment locating site (Elevated) is Template 01.
+It has a clear structure that works for any similar
+service business:
+
+  - Hero section (photo + headline + CTA)
+  - Gallery / proof section
+  - How It Works (3 steps)
+  - Our Story / About
+  - Service areas or neighborhoods
+  - Reviews (auto-scrolling, Google-sourced)
+  - Contact form (modal, lead capture)
+  - FAQ page
+  - Neighborhoods/Services page
+
+TO DEPLOY A NEW CLIENT:
+  1. Fork the template repo
+  2. Update: business name, city, colors, copy, photos
+  3. Wire up their Resend email
+  4. Add their Sanity project
+  5. Deploy to Vercel under their domain
+  Realistic time: 3-6 hours for a clean deployment
+
+TEMPLATE CATEGORIES TO BUILD NEXT:
+  - Apartment locators (done — Elevated)
+  - Real estate agents
+  - Personal trainers / fitness coaches
+  - Photographers / videographers
+  - Consultants / coaches
+  - Local service businesses (cleaners, landscapers, etc.)
+
+
+-----------------------------------------------------
+REVIEW AUTOMATION PIPELINE
+-----------------------------------------------------
+Built into the Elevated template — replicate for
+every new client:
+
+  1. Client has Google Business Profile
+  2. Nightly cron job pulls 4-5 star reviews via
+     Google Places API
+  3. Reviews land in Sanity as "pending"
+  4. Client gets email: "You have new reviews to approve"
+  5. Client logs into Sanity, approves with one click
+  6. Site updates instantly
+
+What client needs to provide (you handle the rest):
+  - Google Business Place ID
+  - Google Cloud API Key
+  Both are free and take ~15 minutes to set up.
+  Include instructions in your client onboarding doc.
+
+
+-----------------------------------------------------
+ONBOARDING CHECKLIST (FOR EACH NEW CLIENT)
+-----------------------------------------------------
+YOUR SIDE:
+  [ ] Fork template repo, rename for client
+  [ ] Customize: name, copy, colors, photos
+  [ ] Create Sanity project, add client schema
+  [ ] Create client's Sanity login credentials
+  [ ] Add client project to Vercel
+  [ ] Configure Resend sender for client's email
+  [ ] Add client domain in Vercel
+  [ ] Set up Google review pipeline (if included)
+  [ ] Test contact form end-to-end
+  [ ] Test on mobile
+
+CLIENT SIDE:
+  [ ] Add DNS record (you send screenshot)
+  [ ] Confirm they received Sanity login
+  [ ] Confirm lead test email arrived in their inbox
+
+HAND-OFF:
+  [ ] Send client a 1-page "how to use your site" doc
+  [ ] Schedule 15-min call to walk through Sanity
+  [ ] Set up UptimeRobot alert (free) so you know if
+      any client site ever goes down
+
+
+-----------------------------------------------------
+TOOLS REFERENCE
+-----------------------------------------------------
+Vercel:       vercel.com
+GitHub:       github.com
+Resend:       resend.com
+Sanity:       sanity.io
+Google Cloud: console.cloud.google.com
+UptimeRobot:  uptimerobot.com (free monitoring)
+Namecheap:    namecheap.com (if you want to resell domains)
+
+
+-----------------------------------------------------
+TECH STACK PER SITE
+-----------------------------------------------------
+Framework:    Next.js 14 (App Router)
+Styling:      Tailwind CSS
+CMS:          Sanity.io
+Email:        Resend
+Hosting:      Vercel
+Fonts:        Google Fonts via next/font
+Images:       next/image (Unsplash for placeholders)
+Animations:   CSS keyframes via globals.css
+
+This stack is:
+  - Fast (Vercel edge network, next/image optimization)
+  - Cheap (all free tiers cover small business needs)
+  - Maintainable (you already know it)
+  - Professional (same stack used by top agencies)
+
+
+=====================================================
+  CREATED: Based on Elevated Apartment Locating build
+  USE THIS as the foundation for future client sites
+=====================================================
