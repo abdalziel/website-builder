@@ -60,14 +60,14 @@ const tiers = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-[var(--color-cream)]">
+    <section id="services" aria-labelledby="services-heading" className="py-24 bg-[var(--color-cream)]">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-[var(--color-rust)] font-semibold text-sm tracking-widest uppercase mb-3">
             Pricing
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-canyon)] mb-4">
+          <h2 id="services-heading" className="text-4xl md:text-5xl font-bold text-[var(--color-canyon)] mb-4">
             Simple, honest pricing.
           </h2>
           <p className="text-lg text-[var(--color-stone)] max-w-xl mx-auto">
@@ -81,9 +81,10 @@ export default function Services() {
           {tiers.map((tier) => (
             <div
               key={tier.name}
+              aria-label={tier.highlight ? `${tier.name} — most popular plan` : tier.name}
               className={`relative rounded-2xl p-8 flex flex-col ${
                 tier.highlight
-                  ? "bg-[var(--color-canyon)] text-white shadow-2xl md:scale-[1.02]"
+                  ? "bg-[var(--color-canyon)] text-white shadow-2xl md:scale-[1.02] ring-2 ring-[var(--color-rust)]"
                   : "bg-white border border-[var(--color-sandstone)] text-[var(--color-canyon)]"
               }`}
             >
@@ -140,6 +141,7 @@ export default function Services() {
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3 text-sm">
                     <svg
+                      aria-hidden="true"
                       className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
                         tier.highlight ? "text-[var(--color-rust-light)]" : "text-[var(--color-rust)]"
                       }`}

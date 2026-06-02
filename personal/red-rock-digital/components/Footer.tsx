@@ -1,3 +1,5 @@
+import Logo from "@/components/Logo";
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -8,23 +10,19 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-7 h-7 flex items-end gap-[3px]">
-                <div className="w-1.5 bg-[var(--color-rust)] rounded-sm" style={{ height: "60%" }} />
-                <div className="w-1.5 bg-[var(--color-rust-light)] rounded-sm" style={{ height: "80%" }} />
-                <div className="w-1.5 bg-[var(--color-sandstone)] rounded-sm" style={{ height: "100%" }} />
-              </div>
+              <Logo size={28} />
               <span className="text-white font-semibold">
                 Red Rock <span className="text-[var(--color-rust-light)]">Digital</span>
               </span>
             </div>
-            <p className="text-white/50 text-sm leading-relaxed max-w-xs">
+            <p className="text-white/70 text-sm leading-relaxed max-w-xs">
               Colorado-built websites for Colorado small businesses. We handle everything after launch.
             </p>
           </div>
 
           {/* Links */}
           <div>
-            <p className="text-white/30 text-xs font-semibold uppercase tracking-widest mb-4">Navigation</p>
+            <p className="text-white/60 text-xs font-semibold uppercase tracking-widest mb-4">Navigation</p>
             <ul className="space-y-2.5">
               {[
                 ["Services", "#services"],
@@ -35,7 +33,7 @@ export default function Footer() {
                 ["Get a Quote", "#contact"],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <a href={href} className="text-white/50 hover:text-white text-sm transition-colors">
+                  <a href={href} className="text-white/70 hover:text-white text-sm transition-colors">
                     {label}
                   </a>
                 </li>
@@ -45,17 +43,17 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="text-white/30 text-xs font-semibold uppercase tracking-widest mb-4">Contact</p>
+            <p className="text-white/60 text-xs font-semibold uppercase tracking-widest mb-4">Contact</p>
             <ul className="space-y-2.5">
               <li>
                 <a
                   href="mailto:hello@redrockdigital.ai"
-                  className="text-white/50 hover:text-white text-sm transition-colors"
+                  className="text-white/70 hover:text-white text-sm transition-colors"
                 >
                   hello@redrockdigital.ai
                 </a>
               </li>
-              <li className="text-white/50 text-sm">Colorado, USA</li>
+              <li className="text-white/70 text-sm">Colorado, USA</li>
             </ul>
             <a
               href="#contact"
@@ -67,10 +65,10 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/30 text-xs">
+          <p className="text-white/60 text-xs">
             © {year} Red Rock Digital. All rights reserved.
           </p>
-          <p className="text-white/20 text-xs">
+          <p className="text-white/55 text-xs">
             Colorado-based · Fast sites · Honest pricing
           </p>
         </div>

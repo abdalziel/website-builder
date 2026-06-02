@@ -3,10 +3,15 @@ import { NextResponse } from "next/server";
 import { SITE } from "@/lib/site";
 
 // Escape user input before interpolating into HTML email bodies.
+const HTML_ESCAPES: Record<string, string> = {
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  '"': "&quot;",
+  "'": "&#39;",
+};
 function escapeHtml(value: string): string {
-  return value.replace(/[&<>"']/g, (c) =>
-    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!
-  );
+  return value.replace(/[&<>"']/g, (c) => HTML_ESCAPES[c]);
 }
 
 // Strip CR/LF (header-injection vector) and cap length for the subject line.

@@ -54,8 +54,9 @@ export default function OpengraphImage() {
         </div>
 
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
-          <div style={{ fontSize: "36px", fontWeight: 700, color: "#FFFFFF" }}>
-            Red Rock <span style={{ color: "#E05A3A" }}>Digital</span>
+          <div style={{ display: "flex", fontSize: "36px", fontWeight: 700, color: "#FFFFFF" }}>
+            <span>Red Rock&nbsp;</span>
+            <span style={{ color: "#E05A3A" }}>Digital</span>
           </div>
           <div style={{ fontSize: "28px", color: "rgba(255,255,255,0.6)" }}>redrockdigital.ai</div>
         </div>

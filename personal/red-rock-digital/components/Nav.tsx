@@ -42,7 +42,14 @@ export default function Nav() {
   return (
     <div className="fixed top-0 left-0 right-0 z-50">
       {/* Hidden checkbox — only the hamburger label below toggles it */}
-      <input ref={cbRef} type="checkbox" id="mobile-nav" className="sr-only" />
+      <input
+        ref={cbRef}
+        type="checkbox"
+        id="mobile-nav"
+        className="sr-only"
+        aria-hidden="true"
+        tabIndex={-1}
+      />
 
       {/* Backdrop at z-[1] — nav/menu sit at z-[2] so links are never covered */}
       {open && (
@@ -58,12 +65,8 @@ export default function Nav() {
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
 
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-8 h-8 flex items-end gap-[3px]">
-              <div className="w-2 bg-[var(--color-rust)] rounded-sm" style={{ height: "60%" }} />
-              <div className="w-2 bg-[var(--color-rust-light)] rounded-sm" style={{ height: "80%" }} />
-              <div className="w-2 bg-[var(--color-sandstone)] rounded-sm" style={{ height: "100%" }} />
-            </div>
+          <a href="#" className="flex items-center gap-2" aria-label="Red Rock Digital — home">
+            <Logo size={32} />
             <span className="text-white font-semibold text-lg tracking-tight">
               Red Rock <span className="text-[var(--color-rust-light)]">Digital</span>
             </span>
@@ -86,7 +89,20 @@ export default function Nav() {
             htmlFor="mobile-nav"
             className="md:hidden flex items-center justify-center w-12 h-12 -mr-2 cursor-pointer"
             style={{ WebkitTapHighlightColor: "transparent" }}
+            role="button"
+            tabIndex={0}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
             aria-label={open ? "Close menu" : "Open menu"}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                if (cbRef.current) {
+                  cbRef.current.checked = !cbRef.current.checked;
+                  setOpen(cbRef.current.checked);
+                }
+              }
+            }}
           >
             <div className="relative w-6 h-5">
               <span className={`absolute left-0 block h-0.5 w-6 bg-white rounded-full transition-all duration-300 ${open ? "top-[9px] rotate-45" : "top-0"}`} />
@@ -99,6 +115,7 @@ export default function Nav() {
 
       {/* Mobile menu at z-[2], same level as nav — above the backdrop */}
       <div
+        id="mobile-menu"
         className={`flex flex-col bg-[var(--color-canyon)] border-t border-white/10 px-6 pb-6 gap-1 md:hidden overflow-hidden transition-all duration-300 ease-in-out ${open ? "max-h-[500px] opacity-100 pt-4" : "max-h-0 opacity-0"}`}
         style={{ position: "relative", zIndex: 2 }}
       >

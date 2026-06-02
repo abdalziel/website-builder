@@ -13,11 +13,11 @@ const projects = [
     accentColor: "var(--color-sky)",
   },
   {
-    name: "Your Business Here",
-    category: "Your Industry · Your City, CO",
+    name: "Your business, next.",
+    category: "Now booking · Colorado",
     description:
-      "We're actively taking on new clients. Your site could be next — live in 1–2 weeks with everything set up and running.",
-    results: ["Book a free call", "Launch in 2 weeks", "Fully managed"],
+      "We're taking on a handful of new clients this season. Yours could be the next site featured here — designed, built, and live in 1–2 weeks.",
+    results: ["Free 30-min call", "Live in 1–2 weeks", "Fully managed"],
     url: "#contact",
     accentColor: "var(--color-rust)",
     isPlaceholder: true,
@@ -26,14 +26,14 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-24 bg-[var(--color-sandstone-light)]">
+    <section id="portfolio" aria-labelledby="portfolio-heading" className="py-24 bg-[var(--color-sandstone-light)]">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-[var(--color-rust)] font-semibold text-sm tracking-widest uppercase mb-3">
             Our Work
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-canyon)] mb-4">
+          <h2 id="portfolio-heading" className="text-4xl md:text-5xl font-bold text-[var(--color-canyon)] mb-4">
             Built in Colorado. Built to last.
           </h2>
           <p className="text-lg text-[var(--color-stone)] max-w-xl mx-auto">
@@ -60,10 +60,10 @@ export default function Portfolio() {
               >
                 {project.isPlaceholder ? (
                   <div className="flex flex-col items-center gap-3 text-[var(--color-stone)]">
-                    <svg className="w-10 h-10 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                    <svg className="w-10 h-10 opacity-40" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                     </svg>
-                    <span className="text-sm font-medium opacity-60">Your site here</span>
+                    <span className="text-sm font-medium opacity-60">You&apos;re next</span>
                   </div>
                 ) : (
                   <div className="text-center px-8">
@@ -108,7 +108,7 @@ export default function Portfolio() {
                   style={{ color: `${project.accentColor}` }}
                 >
                   {project.isPlaceholder ? "Get Started" : "View Site"}
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <svg className="w-4 h-4" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </a>
