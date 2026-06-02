@@ -20,6 +20,7 @@ export default function Hero() {
           preserveAspectRatio="none"
           viewBox="0 0 1440 400"
           fill="none"
+          aria-hidden="true"
         >
           <polygon points="0,400 0,250 380,140 760,240 1120,110 1440,200 1440,400" fill="#2D1E10" />
           <polygon points="0,400 0,300 320,220 700,320 1040,210 1440,290 1440,400" fill="#A33820" opacity="0.28" />
