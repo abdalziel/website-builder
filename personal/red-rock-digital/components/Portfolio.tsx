@@ -1,4 +1,17 @@
-const projects = [
+import Image from "next/image";
+
+type Project = {
+  name: string;
+  category: string;
+  description: string;
+  results: string[];
+  url: string;
+  accentColor: string;
+  image?: string;
+  isPlaceholder?: boolean;
+};
+
+const projects: Project[] = [
   {
     name: "Elevated Apartment Locating",
     category: "Apartment Locating · Denver, CO",
@@ -11,6 +24,7 @@ const projects = [
     ],
     url: "https://elevatedapartmentlocating.com",
     accentColor: "var(--color-sky)",
+    image: "/elevated-home.jpg",
   },
   {
     name: "Your business, next.",
@@ -65,6 +79,14 @@ export default function Portfolio() {
                     </svg>
                     <span className="text-sm font-medium opacity-60">You&apos;re next</span>
                   </div>
+                ) : project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={`${project.name} homepage`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-top"
+                  />
                 ) : (
                   <div className="text-center px-8">
                     <div
