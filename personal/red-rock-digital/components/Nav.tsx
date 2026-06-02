@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Logo from "@/components/Logo";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -19,6 +20,16 @@ export default function Nav() {
     setOpen(false);
     if (cbRef.current) cbRef.current.checked = false;
   };
+
+  // Close the mobile menu on Escape
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") close();
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [open]);
 
   const links = [
     { label: "Services", href: "#services" },

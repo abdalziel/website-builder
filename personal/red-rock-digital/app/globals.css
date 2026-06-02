@@ -8,22 +8,17 @@
   --color-canyon-mid: #2D1E10;
   --color-sandstone: #E8D0A0;
   --color-sandstone-light: #FAF3E0;
-  --color-stone: #8B7355;
+  --color-stone: #6E5A45;
   --color-stone-light: #B09070;
   --color-sky: #4A8FA8;
   --color-cream: #FAF7F2;
   --color-charcoal: #2C2420;
 
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 * {
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
@@ -49,6 +44,11 @@ body {
   100% { transform: translateX(-50%); }
 }
 
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
 .animate-fade-up {
   animation: fadeUp 0.6s ease forwards;
 }
@@ -57,6 +57,34 @@ body {
   animation: scrollLeft 30s linear infinite;
 }
 
+.animate-scroll-bounce {
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
 .delay-100 { animation-delay: 0.1s; }
 .delay-200 { animation-delay: 0.2s; }
 .delay-300 { animation-delay: 0.3s; }
+
+/* Smooth anchor scrolling only when the user hasn't asked to reduce motion. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Respect reduced-motion: disable entrance/loop animations entirely. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-scroll-left,
+  .animate-scroll-bounce {
+    animation: none !important;
+  }
+  .delay-100,
+  .delay-200,
+  .delay-300 {
+    animation-delay: 0s !important;
+  }
+  * {
+    scroll-behavior: auto !important;
+  }
+}

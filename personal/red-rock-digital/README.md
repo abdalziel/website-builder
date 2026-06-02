@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Red Rock Digital
 
-## Getting Started
+Marketing site for **Red Rock Digital** — a Colorado studio that builds, hosts, and manages websites for small businesses.
 
-First, run the development server:
+Live site: https://redrockdigital.ai
+
+## Stack
+
+- **Next.js 16** (App Router, Turbopack) + **React 19**
+- **Tailwind CSS v4** (design tokens in `app/globals.css`)
+- **TypeScript**
+- **Resend** for contact-form email (`app/api/contact/route.ts`)
+- Deployed on **Vercel**
+
+## Local development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev          # http://localhost:3000  (or double-click "Start Red Rock Digital.command" → :3002)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build & verify before deploying
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build        # must compile clean
+npm run lint         # must pass with 0 errors
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment variables
 
-## Learn More
+Create `.env.local` (gitignored) and set the same value in **Vercel → Settings → Environment Variables**:
 
-To learn more about Next.js, take a look at the following resources:
+| Variable         | Purpose                                  |
+| ---------------- | ---------------------------------------- |
+| `RESEND_API_KEY` | Sends contact-form notification + confirmation email via Resend |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The contact form sends from `hello@redrockdigital.ai`, so the **redrockdigital.ai domain must be verified in Resend** (SPF/DKIM DNS records) before form emails deliver.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project structure
 
-## Deploy on Vercel
+```
+app/
+  layout.tsx              Root layout, metadata, JSON-LD, skip link
+  page.tsx               Single-page composition of all sections
+  api/contact/route.ts   Lead form handler (validation, escaping, honeypot, rate limit)
+  robots.ts / sitemap.ts SEO crawl files
+  icon.svg               Branded favicon
+  opengraph-image.tsx    Generated social share image
+  not-found.tsx          Branded 404
+components/               Section components (Hero, Services, FAQ, Contact, …)
+lib/
+  site.ts                Shared site constants
+  faqs.ts                FAQ content (drives both UI and FAQPage schema)
+  schema.ts              JSON-LD structured data
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Pushing to the connected GitHub repo auto-deploys via Vercel. See `LAUNCH.md` for the full go-live checklist (Resend domain verification, DNS, smoke tests).

@@ -1,21 +1,55 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
+import { SITE } from "@/lib/site";
+import { schemaGraph } from "@/lib/schema";
 
 const geist = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
+const title = `${SITE.name} — Colorado Web Design for Small Business`;
+
 export const metadata: Metadata = {
-  title: "Red Rock Digital — Colorado Web Design",
-  description:
-    "We build, host, and manage websites for Colorado small businesses. Fast launch, no tech headaches, monthly support included.",
+  metadataBase: new URL(SITE.url),
+  title: {
+    default: title,
+    template: `%s — ${SITE.name}`,
+  },
+  description: SITE.description,
+  applicationName: SITE.name,
+  keywords: [
+    "Colorado web design",
+    "Denver web design",
+    "small business website",
+    "website design and hosting",
+    "managed websites Colorado",
+    "local SEO Colorado",
+  ],
+  authors: [{ name: SITE.founder }],
+  creator: SITE.name,
+  publisher: SITE.name,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Red Rock Digital — Colorado Web Design",
-    description:
-      "We build, host, and manage websites for Colorado small businesses.",
-    siteName: "Red Rock Digital",
+    type: "website",
+    url: SITE.url,
+    siteName: SITE.name,
+    title,
+    description: SITE.description,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description: SITE.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
 };
 
@@ -24,7 +58,19 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geist.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-[var(--color-rust)] focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold"
+        >
+          Skip to main content
+        </a>
+        {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph()) }}
+        />
+      </body>
     </html>
   );
 }
