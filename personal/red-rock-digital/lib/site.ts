@@ -6,9 +6,9 @@ export const SITE = {
   email: "hello@redrockdigital.ai",
   founder: "Blair",
   areaServed: "Colorado",
-  tagline: "Colorado Web Design",
+  tagline: "Websites for Front Range Remodelers & Contractors",
   description:
-    "We build, host, and manage websites for Colorado small businesses. Fast launch, no tech headaches, monthly support included.",
+    "Websites built, hosted, and managed for Front Range remodelers and contractors. More of the right jobs, none of the website hassle — you own it, no lock-in, and a local guy who answers the phone.",
 } as const;
 
 // Pricing plans — kept here so the page, the contact form, and the schema all agree.
