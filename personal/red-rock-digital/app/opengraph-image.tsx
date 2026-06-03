@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Red Rock Digital — Colorado Web Design";
+export const alt = "Red Rock Digital — Websites for Front Range Remodelers & Contractors";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -38,7 +38,7 @@ export default function OpengraphImage() {
               marginBottom: "20px",
             }}
           >
-            Colorado Web Design
+            For Front Range Remodelers
           </div>
           <div
             style={{
@@ -49,7 +49,7 @@ export default function OpengraphImage() {
               maxWidth: "900px",
             }}
           >
-            Websites that actually work.
+            More of the right jobs. None of the website hassle.
           </div>
         </div>
 

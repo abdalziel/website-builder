@@ -1,18 +1,18 @@
 const tiers = [
   {
     name: "Basecamp",
-    tagline: "Get online, look professional.",
+    tagline: "Get found, look the part.",
     setup: "$499",
     monthly: "$75/mo",
     description:
-      "Everything a small business needs to have a clean, credible presence online.",
+      "Everything a remodeler needs to look licensed, credible, and ready to quote the job.",
     features: [
       "Up to 5 pages",
-      "Mobile-optimized design",
-      "Contact form + lead capture",
-      "Google Analytics setup",
-      "Fast hosting (your domain)",
-      "Monthly support & updates",
+      "Project gallery with before-and-afters",
+      "Quote request form + lead capture",
+      "\"Licensed & insured\" trust signals",
+      "Fast hosting (your domain — you own it)",
+      "Same-day edits, no call center",
       "SSL certificate",
     ],
     cta: "Start with Basecamp",
@@ -20,18 +20,18 @@ const tiers = [
   },
   {
     name: "Ascent",
-    tagline: "Grow your online presence.",
+    tagline: "Win more of the right jobs.",
     setup: "$999",
     monthly: "$125/mo",
     description:
-      "Custom design, SEO foundation, and Google review automation that builds trust on autopilot.",
+      "Custom design, local SEO, and Google reviews so homeowners searching \"kitchen remodel near me\" find you and trust you.",
     features: [
       "Up to 10 pages",
-      "Custom design (your brand)",
-      "SEO-optimized structure",
-      "Google review automation",
-      "Sanity CMS — edit your content",
-      "Priority email support",
+      "Custom design that looks like your work",
+      "Service-area pages + local SEO",
+      "Google review collection on autopilot",
+      "Edit your own galleries & pages",
+      "A local human who answers the phone",
       "Everything in Basecamp",
     ],
     cta: "Start with Ascent",
@@ -39,18 +39,18 @@ const tiers = [
   },
   {
     name: "Summit",
-    tagline: "Full-service, zero effort.",
+    tagline: "Book jobs, none of the hassle.",
     setup: "$1,799",
     monthly: "$200/mo",
     description:
-      "Online booking, advanced integrations, and hands-on management. We handle everything.",
+      "Financing CTAs, quote automation, and hands-on management. You run the jobsite — I run the website.",
     features: [
-      "Unlimited pages",
-      "Online booking system",
-      "Advanced lead automation",
-      "Monthly content updates",
-      "Priority phone + email support",
-      "Performance reporting",
+      "Unlimited pages + service areas",
+      "Financing CTA to close bigger jobs",
+      "Quote + lead automation",
+      "Monthly gallery & content updates",
+      "Priority phone — talk to me, not a queue",
+      "Found-online performance reporting",
       "Everything in Ascent",
     ],
     cta: "Start with Summit",
@@ -71,8 +71,8 @@ export default function Services() {
             Simple, honest pricing.
           </h2>
           <p className="text-lg text-[var(--color-stone)] max-w-xl mx-auto">
-            A one-time setup fee to get you live. A monthly retainer so we
-            handle everything after that.
+            One setup fee to get you live. A flat monthly so I handle
+            everything after that. You own the site — cancel anytime.
           </p>
         </div>
 
@@ -175,7 +175,7 @@ export default function Services() {
 
         {/* Fine print */}
         <p className="text-center text-sm text-[var(--color-stone)] mt-8">
-          All plans include hosting, SSL, and ongoing support. No contracts — cancel anytime.
+          Every plan: hosting, SSL, same-day edits, and a site you own. No contracts — cancel anytime, keep everything.
         </p>
       </div>
     </section>

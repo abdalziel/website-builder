@@ -16,7 +16,7 @@ const projects: Project[] = [
     name: "Elevated Apartment Locating",
     category: "Apartment Locating · Denver, CO",
     description:
-      "Full-service site for a Denver apartment locator — hero, how it works, neighborhood guides, Google review automation, and a lead capture form.",
+      "Full-service site for a Denver apartment locator — hero, how it works, neighborhood guides, Google review automation, and a lead capture form. Different trade, same playbook I'd run for your remodeling business.",
     results: [
       "Live in 9 days",
       "Automated review pipeline",
@@ -27,11 +27,11 @@ const projects: Project[] = [
     image: "/elevated-home.jpg",
   },
   {
-    name: "Your business, next.",
-    category: "Now booking · Colorado",
+    name: "Your remodeling business, next.",
+    category: "Now booking · Front Range, CO",
     description:
-      "We're taking on a handful of new clients this season. Yours could be the next site featured here — designed, built, and live in 1–2 weeks.",
-    results: ["Free 30-min call", "Live in 1–2 weeks", "Fully managed"],
+      "I'm taking on a handful of Front Range remodelers and contractors this season. Your project gallery, before-and-afters, and quote requests could be the next site featured here — designed, built, and live in 1–2 weeks. And you own it.",
+    results: ["Free 30-min call", "Live in 1–2 weeks", "You own it"],
     url: "#contact",
     accentColor: "var(--color-rust)",
     isPlaceholder: true,
@@ -51,8 +51,8 @@ export default function Portfolio() {
             Built in Colorado. Built to last.
           </h2>
           <p className="text-lg text-[var(--color-stone)] max-w-xl mx-auto">
-            Every site we build is custom to your business, fast to launch, and
-            managed by us going forward.
+            Every site is custom to your trade, fast to launch, managed by a
+            local guy who answers the phone — and yours to keep.
           </p>
         </div>
 

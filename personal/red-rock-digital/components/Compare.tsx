@@ -1,54 +1,61 @@
-const columns = ["DIY", "Freelancer", "Agency"] as const;
+const columns = ["DIY", "Freelancer", "National service"] as const;
 
 const rows = [
   {
-    feature: "Site goes live",
-    diy: "Weeks of tutorials",
-    freelancer: "4–8 weeks",
-    agency: "2–4 months",
-    us: "1–2 weeks",
+    feature: "Do you own it?",
+    diy: "Yes, but you built it",
+    freelancer: "Usually",
+    agency: "No — they own it",
+    us: "Yes. 100% yours",
   },
   {
-    feature: "Ongoing updates",
-    diy: "You figure it out",
-    freelancer: "Hourly billing",
-    agency: "Expensive retainer",
-    us: "Included",
+    feature: "If you cancel",
+    diy: "It's all yours",
+    freelancer: "Depends on the deal",
+    agency: "Site goes dark",
+    us: "Keep everything",
+  },
+  {
+    feature: "Locked into a contract?",
+    diy: "No",
+    freelancer: "Sometimes",
+    agency: "Long-term lock-in",
+    us: "No contract",
+  },
+  {
+    feature: "Who you talk to",
+    diy: "Nobody",
+    freelancer: "Them, if free",
+    agency: "A call center",
+    us: "Me — a local person",
+  },
+  {
+    feature: "Built for remodelers?",
+    diy: "You'd have to",
+    freelancer: "Maybe",
+    agency: "Generic template",
+    us: "Made for your work",
   },
   {
     feature: "When something breaks",
     diy: "You're on your own",
-    freelancer: "Hope they're available",
+    freelancer: "Hope they answer",
     agency: "Open a ticket",
-    us: "We fix it same day",
+    us: "Texted, fixed same day",
   },
   {
-    feature: "Monthly cost",
-    diy: "$20–50 tools",
-    freelancer: "Nothing (you own it)",
-    agency: "$500+/mo",
-    us: "$75–200/mo",
-  },
-  {
-    feature: "SEO setup",
+    feature: "Gets you found locally",
     diy: "Manual, inconsistent",
     freelancer: "Sometimes",
-    agency: "Extra cost",
-    us: "Included",
+    agency: "Costs extra",
+    us: "Local SEO included",
   },
   {
     feature: "Google reviews on site",
     diy: "Plugin + manual",
     freelancer: "Rarely",
-    agency: "Extra cost",
-    us: "Automated",
-  },
-  {
-    feature: "You own the domain",
-    diy: "✓",
-    freelancer: "✓",
-    agency: "✓",
-    us: "✓",
+    agency: "Costs extra",
+    us: "Pulled in for you",
   },
 ] as const;
 
@@ -62,11 +69,11 @@ export default function Compare() {
             How We Stack Up
           </p>
           <h2 id="compare-heading" className="text-4xl md:text-5xl font-bold text-white mb-4">
-            We built this for people who just want it handled.
+            A site you own — not one you rent.
           </h2>
           <p className="text-white/70 text-lg max-w-xl mx-auto">
             There are a lot of ways to get a website. Here&apos;s an honest look at
-            how they compare.
+            how they stack up for a busy contractor.
           </p>
         </div>
 
@@ -80,7 +87,7 @@ export default function Compare() {
                 </th>
                 <th scope="col" className="py-4 px-4 text-white/60 text-sm font-medium text-center">DIY</th>
                 <th scope="col" className="py-4 px-4 text-white/60 text-sm font-medium text-center">Freelancer</th>
-                <th scope="col" className="py-4 px-4 text-white/60 text-sm font-medium text-center">Agency</th>
+                <th scope="col" className="py-4 px-4 text-white/60 text-sm font-medium text-center">National service</th>
                 <th scope="col" className="py-4 px-6 text-[var(--color-rust-light)] text-sm font-bold text-center bg-white/5 rounded-t-xl">
                   Red Rock Digital
                 </th>

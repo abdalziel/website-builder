@@ -60,12 +60,12 @@ export default function Contact() {
               Get Started
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-canyon)] leading-tight mb-6">
-              Let&apos;s build something worth showing off.
+              Let&apos;s get you more of the right jobs.
             </h2>
             <p className="text-[var(--color-stone)] text-lg leading-relaxed mb-8">
-              Fill out the form and we&apos;ll reach out within one business day to
-              schedule a free 30-minute call. No pressure, no pitch deck — just
-              a conversation about your business.
+              Fill out the form and I&apos;ll reach out within one business day to set
+              up a quick call. No pressure, no pitch deck, no jargon — just a straight
+              conversation about your remodeling business and what a site could do for it.
             </p>
 
             {/* Contact details */}
@@ -88,7 +88,7 @@ export default function Contact() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                   </svg>
                 </div>
-                <span className="text-sm font-medium">Colorado, USA</span>
+                <span className="text-sm font-medium">Serving the Front Range — Denver · Boulder · Colorado Springs</span>
               </div>
             </div>
           </div>
@@ -169,7 +169,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="business" className={labelClass}>Business Name *</label>
+                  <label htmlFor="business" className={labelClass}>Company Name *</label>
                   <input
                     id="business"
                     type="text"
@@ -178,7 +178,7 @@ export default function Contact() {
                     value={form.business}
                     onChange={(e) => setForm({ ...form, business: e.target.value })}
                     className={inputClass}
-                    placeholder="Your business name"
+                    placeholder="Your remodeling or contracting company"
                   />
                 </div>
 
@@ -199,14 +199,14 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className={labelClass}>Tell us about your business</label>
+                  <label htmlFor="message" className={labelClass}>Tell us about your remodeling business</label>
                   <textarea
                     id="message"
                     rows={3}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     className={`${inputClass} resize-none`}
-                    placeholder="What do you do, who are your customers, what's your goal for the site?"
+                    placeholder="What kind of work do you do, where do you work, and what jobs do you want more of?"
                   />
                 </div>
 

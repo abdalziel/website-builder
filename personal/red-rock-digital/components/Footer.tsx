@@ -16,7 +16,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-white/70 text-sm leading-relaxed max-w-xs">
-              Colorado-built websites for Colorado small businesses. We handle everything after launch.
+              Websites for Front Range remodelers &amp; contractors. Built, hosted, and managed by a local guy who answers the phone — and you own it.
             </p>
           </div>
 
@@ -69,7 +69,7 @@ export default function Footer() {
             © {year} Red Rock Digital. All rights reserved.
           </p>
           <p className="text-white/55 text-xs">
-            Colorado-based · Fast sites · Honest pricing
+            Front Range · You own it · No lock-in
           </p>
         </div>
       </div>

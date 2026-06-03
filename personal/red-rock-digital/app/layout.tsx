@@ -9,7 +9,7 @@ const geist = Geist({
   subsets: ["latin"],
 });
 
-const title = `${SITE.name} — Colorado Web Design for Small Business`;
+const title = `${SITE.name} — Websites for Front Range Remodelers & Contractors`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -20,12 +20,16 @@ export const metadata: Metadata = {
   description: SITE.description,
   applicationName: SITE.name,
   keywords: [
-    "Colorado web design",
-    "Denver web design",
-    "small business website",
+    "remodeler website design",
+    "contractor website design",
+    "home improvement websites",
+    "Denver remodeler website",
+    "Boulder contractor website",
+    "Colorado Springs remodeler website",
+    "Front Range contractor web design",
+    "general contractor website",
     "website design and hosting",
-    "managed websites Colorado",
-    "local SEO Colorado",
+    "local SEO for contractors",
   ],
   authors: [{ name: SITE.founder }],
   creator: SITE.name,

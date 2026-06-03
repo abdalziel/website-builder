@@ -3,7 +3,7 @@ const steps = [
     number: "01",
     title: "We Talk",
     description:
-      "A free 30-minute call. You tell us about your business, your customers, and what you need. We take it from there — no homework required.",
+      "A free 30-minute call. Tell me about your jobs, the work you want more of, and your service area. I take it from there — no homework, no jargon.",
     icon: (
       <svg className="w-6 h-6" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
@@ -14,7 +14,7 @@ const steps = [
     number: "02",
     title: "We Build",
     description:
-      "Your site is live in 1–2 weeks. We handle design, copywriting direction, setup, and testing. You review and approve. One DNS record is all you touch.",
+      "Your site is live in 1–2 weeks — project gallery, before-and-afters, quote requests, licensed & insured trust signals. You review and approve. One DNS record is all you touch.",
     icon: (
       <svg className="w-6 h-6" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
@@ -23,9 +23,9 @@ const steps = [
   },
   {
     number: "03",
-    title: "You Grow",
+    title: "You Book Jobs",
     description:
-      "Your site is live, leads are coming in, and we're watching everything. Need an update? Just send us a message. We handle it, usually same day.",
+      "Homeowners find you, trust you, and request a quote. Need to swap a photo or update a service? Text me. I handle it, usually same day. And you own the whole thing.",
     icon: (
       <svg className="w-6 h-6" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
@@ -44,10 +44,10 @@ export default function HowItWorks() {
             The Process
           </p>
           <h2 id="how-heading" className="text-4xl md:text-5xl font-bold text-[var(--color-canyon)] mb-4">
-            Simple from start to launch.
+            We talk. We build. You book jobs.
           </h2>
           <p className="text-lg text-[var(--color-stone)] max-w-xl mx-auto">
-            Most of our clients are live within two weeks of our first call.
+            Most remodelers are live within two weeks of that first call.
           </p>
         </div>
 

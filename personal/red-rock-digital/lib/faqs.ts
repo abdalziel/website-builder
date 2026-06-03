@@ -7,41 +7,46 @@ export const faqs: Faq[] = [
   {
     question: "Do I own my website?",
     answer:
-      "Yes. You own your domain name and all of your content. We own and operate the hosting infrastructure — that's what keeps your costs low and your site running reliably. If you ever want to leave, we'll package everything up and help you move it.",
+      "Yes. You own your domain, your content, and your code — all of it. We build it, host it, and manage it for you, but it's your site, not ours. That's the opposite of the national \"managed\" outfits that hold your site hostage. If you ever leave, we hand everything over and help you move it.",
   },
   {
-    question: "What does the monthly retainer actually include?",
+    question: "What if I want to cancel?",
     answer:
-      "Hosting on our Vercel infrastructure, your SSL certificate, content updates (new photos, text changes, hours, etc.), uptime monitoring, and priority support. On the Ascent and Summit plans it also includes the Google review automation pipeline.",
+      "Cancel anytime with 30 days notice. No contract, no penalty, no lock-in. We'll package up your site, your domain, and your code and help you take it wherever you want. We keep contractors by doing good work and answering the phone, not by trapping you in a contract.",
   },
   {
-    question: "How do I update my website content?",
+    question: "Will this actually get me found and book me jobs?",
     answer:
-      "Two ways: email or text us a change and we handle it, usually the same day — or log into your Sanity dashboard and make the edit yourself. For things like reviews, team members, and service descriptions, the Sanity CMS is simple enough that most clients prefer doing it themselves.",
+      "That's the whole point. We build in local SEO and a Google reviews pipeline so when a homeowner searches \"kitchen remodel near me\" or \"bathroom contractor in Denver,\" you show up and look trustworthy — project gallery, before-and-afters, licensed & insured, real reviews. The site is built to turn that visit into a quote request, not just look pretty.",
   },
   {
-    question: "How long does it take to get a site live?",
+    question: "What do you need from me to get started?",
     answer:
-      "Typically 1–2 weeks from the time you sign and we have your content. The timeline depends mostly on how quickly you can get us photos and copy — the technical side moves fast because our process and templates are already built.",
+      "Not much. Your logo (or we'll help you get a simple one made), photos of a few finished jobs for the gallery, and a quick rundown of what you do and the areas you serve. We'll ask the right questions on a short call. Most contractors are surprised how little it takes — you keep working, we build the site.",
   },
   {
-    question: "What do I need to provide?",
+    question: "How fast can my site be live?",
     answer:
-      "Your logo (or we can help you get a simple one made), photos of your business or team, and some basic info about what you do and who you serve. We'll ask you the right questions on the intake call. Most clients are surprised by how little we need.",
+      "Usually 1–2 weeks from the time we have your photos and info. The build side moves fast because our process and templates are already dialed in — the only thing that slows it down is how quickly you can get us your job photos. We launched Elevated Apartment Locating, a real site, in about 9 days.",
   },
   {
-    question: "Can I cancel?",
+    question: "What does the monthly cover?",
     answer:
-      "Anytime, with 30 days notice. No penalties, no fees, no lock-in. We'll help you migrate your site if you need to. We don't use contracts to keep clients — we use good service.",
+      "Hosting, your SSL certificate, uptime monitoring, and ongoing changes — text us a new project photo, a price update, or a copy tweak and it's handled, usually same-day. On the Ascent and Summit plans it also includes the Google reviews pipeline that keeps fresh reviews flowing to your profile. You're not paying for a tool you have to learn — you're paying for it to be handled.",
   },
   {
-    question: "Do you work with businesses outside Colorado?",
+    question: "Who actually answers when I call?",
     answer:
-      "Yes, though most of our clients are Colorado-based. The process works entirely remote — the only thing local is our knowledge of the Colorado market.",
+      "I do — Blair. You're not filing a ticket with a call center. Text or call with a change and you get a person who knows your site and gets it done same-day. That's the difference between a local guy and a national service with a queue.",
+  },
+  {
+    question: "Do you only work with remodelers and contractors?",
+    answer:
+      "That's who we're built for — remodelers, GCs, and home-improvement trades on the Front Range (Denver, Boulder, Colorado Springs). The site, the galleries, the quote forms, the trust signals are all set up for how homeowners hire for project work. If you're an adjacent trade, ask — odds are it's a fit.",
   },
   {
     question: "What if I need something that isn't in a plan?",
     answer:
-      "Just ask. Custom e-commerce, appointment booking, membership areas, Spanish-language versions — these are all things we can build. Some are included in Summit, some are add-ons. We'll give you a straight answer on cost before we do anything.",
+      "Just ask. Financing CTAs, appointment booking, extra service-area pages, Spanish-language versions — we can build it. Some of it's already in Summit, some is an add-on. Either way you get a straight answer on cost before we do anything.",
   },
 ];

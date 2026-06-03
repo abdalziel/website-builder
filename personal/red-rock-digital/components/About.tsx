@@ -26,14 +26,14 @@ export default function About() {
                   Red Rock <span className="text-[var(--color-rust-light)]">Digital</span>
                 </p>
                 <p className="text-white/50 text-sm mt-1 tracking-wide uppercase">
-                  Colorado Web Design
+                  Sites for Front Range Contractors
                 </p>
               </div>
             </div>
             {/* Floating stat card — true, verifiable differentiator */}
             <div className="absolute -bottom-5 -right-5 bg-[var(--color-rust)] text-white rounded-2xl p-5 shadow-xl max-w-[170px]">
-              <p className="text-2xl font-bold leading-tight">Founder-led</p>
-              <p className="text-white/80 text-xs mt-1">You work straight with me — no ticket queue.</p>
+              <p className="text-2xl font-bold leading-tight">I answer</p>
+              <p className="text-white/80 text-xs mt-1">Text me a change — handled same-day. No call center.</p>
             </div>
           </div>
 
@@ -43,31 +43,33 @@ export default function About() {
               About
             </p>
             <h2 id="about-heading" className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
-              Built by someone who actually knows Colorado.
+              A local guy who builds for Front Range contractors.
             </h2>
             <div className="space-y-4 text-white/70 leading-relaxed">
               <p>
-                I&apos;m Blair — a Colorado-based web developer who got tired of watching
-                small business owners get burned by agencies that disappear after launch
-                or freelancers who can&apos;t be reached when something breaks.
+                I&apos;m Blair — a Colorado web developer who got tired of watching good
+                remodelers and contractors get burned. The national &ldquo;managed&rdquo;
+                services lock you in and bury you in a call center. The cheap freelancers
+                vanish the second something breaks.
               </p>
               <p>
-                Red Rock Digital is built around a simple idea: your website should
-                feel like it has a dedicated person behind it. Because it does. I
-                handle the hosting, the updates, the performance — and I&apos;m available
-                when you actually need me.
+                Red Rock Digital works on a simple idea: your site should have a real
+                person behind it. Because it does. I build it to look like your work —
+                project galleries, before-and-afters, quote requests — then I host it,
+                manage it, and pick up the phone when you need a change. Text me, it&apos;s
+                handled same-day.
               </p>
               <p>
-                Every site I build uses the same professional stack that powers some of
-                the fastest sites on the web — just delivered at small business pricing,
-                with small business speed, and Colorado reliability.
+                And it&apos;s yours. Your site, your domain, your code — no lock-in, no
+                contract. Cancel anytime and keep everything. Built right here on the
+                Front Range, for the guys doing the work here.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-6 mt-10 pt-10 border-t border-white/10">
               <div>
-                <p className="text-3xl font-bold text-white">Colorado</p>
-                <p className="text-white/60 text-sm mt-1">Based &amp; operated</p>
+                <p className="text-3xl font-bold text-white">You own it</p>
+                <p className="text-white/60 text-sm mt-1">Your site, your domain — no lock-in</p>
               </div>
               <div>
                 <p className="text-3xl font-bold text-white">1–2 wks</p>

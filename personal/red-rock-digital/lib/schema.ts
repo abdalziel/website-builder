@@ -16,12 +16,13 @@ export function schemaGraph() {
     areaServed: { "@type": "State", name: SITE.areaServed },
     address: { "@type": "PostalAddress", addressRegion: "CO", addressCountry: "US" },
     priceRange: "$499–$1,799 setup + $75–$200/mo",
-    slogan: "Websites that actually work.",
+    slogan: "More of the right jobs. None of the website hassle.",
     knowsAbout: [
-      "Web design",
-      "Website hosting",
-      "Small business websites",
-      "Local SEO",
+      "Remodeler and contractor websites",
+      "Website design and hosting",
+      "Project gallery and before-and-after galleries",
+      "Quote request and lead forms",
+      "Local SEO for home-improvement pros",
       "Google review automation",
     ],
   };

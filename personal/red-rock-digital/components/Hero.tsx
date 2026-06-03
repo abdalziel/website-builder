@@ -33,19 +33,20 @@ export default function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-[var(--color-rust)]/20 border border-[var(--color-rust)]/40 text-[var(--color-sandstone)] text-sm font-medium px-4 py-2 rounded-full mb-8 animate-fade-up">
             <span className="w-2 h-2 rounded-full bg-[var(--color-rust-light)] inline-block" aria-hidden="true" />
-            Colorado-based · Websites that work as hard as you do
+            Built for Front Range remodelers &amp; contractors
           </div>
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-6 animate-fade-up delay-100">
-            Your business deserves a website{" "}
-            <span className="text-[var(--color-rust-light)]">that actually works.</span>
+            Your remodeling business deserves a website{" "}
+            <span className="text-[var(--color-rust-light)]">that books jobs.</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-white/75 leading-relaxed mb-10 max-w-2xl animate-fade-up delay-200">
-            We build, host, and manage everything. You focus on your customers —
-            we handle the rest. No tech headaches. Ever.
+            A site that makes homeowners trust you and request a quote — built,
+            hosted, and managed by a local guy who answers the phone. You own it.
+            No lock-in. No website hassle.
           </p>
 
           {/* CTAs */}
@@ -60,7 +61,7 @@ export default function Hero() {
               href="#portfolio"
               className="border border-white/40 hover:border-white/70 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all text-center"
             >
-              See Our Work
+              See a Site We Built
             </a>
           </div>
 
@@ -68,22 +69,22 @@ export default function Hero() {
           <div className="flex flex-wrap items-center gap-6 mt-14 pt-10 border-t border-white/10 animate-fade-up delay-300">
             <div className="text-center">
               <p className="text-3xl font-bold text-white">1–2 wks</p>
-              <p className="text-white/70 text-sm mt-1">Typical launch time</p>
+              <p className="text-white/70 text-sm mt-1">From handshake to live</p>
             </div>
             <div className="w-px h-10 bg-white/20 hidden sm:block" aria-hidden="true" />
             <div className="text-center">
-              <p className="text-3xl font-bold text-white">$0</p>
-              <p className="text-white/70 text-sm mt-1">Tech headaches</p>
+              <p className="text-3xl font-bold text-white">You own it</p>
+              <p className="text-white/70 text-sm mt-1">No lock-in, no contract</p>
             </div>
             <div className="w-px h-10 bg-white/20 hidden sm:block" aria-hidden="true" />
             <div className="text-center">
               <p className="text-3xl font-bold text-white">100%</p>
-              <p className="text-white/70 text-sm mt-1">Managed by us</p>
+              <p className="text-white/70 text-sm mt-1">Managed for you</p>
             </div>
             <div className="w-px h-10 bg-white/20 hidden sm:block" aria-hidden="true" />
             <div className="text-center">
               <p className="text-3xl font-bold text-white">Same day</p>
-              <p className="text-white/70 text-sm mt-1">Updates &amp; edits</p>
+              <p className="text-white/70 text-sm mt-1">Text a change, it&apos;s handled</p>
             </div>
           </div>
         </div>

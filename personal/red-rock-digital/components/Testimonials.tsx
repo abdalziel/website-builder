@@ -65,8 +65,9 @@ function EarlyDays() {
         <blockquote className="text-white/90 leading-relaxed flex-1">
           Red Rock Digital is young — I&apos;d rather tell you that than fill this page
           with reviews you can&apos;t verify. Being early is the upside for you: you get
-          my full attention, founder pricing, and a person who answers when you call.
-          I&apos;m building this roster carefully, one happy client at a time.
+          my full attention, founder pricing, and a person who picks up when you call
+          from the jobsite. I&apos;m building this roster of Front Range remodelers
+          carefully, one booked job at a time.
         </blockquote>
         <div className="mt-6 pt-5 border-t border-white/10">
           <p className="font-semibold text-white text-sm">Blair</p>
@@ -85,8 +86,10 @@ function EarlyDays() {
           </h3>
           <p className="text-[var(--color-stone)] text-sm leading-relaxed mb-5">
             A full marketing site for a Denver apartment-locating service — hero,
-            neighborhood guides, an automated Google-review pipeline, and lead capture.
-            Designed, built, and launched in nine days, and live today.
+            neighborhood guides, an automated Google-review pipeline, and quote
+            capture. Designed, built, and launched in nine days, and live today.
+            It&apos;s not a contractor, but it&apos;s the same build I&apos;d run for your
+            remodeling business.
           </p>
           <div className="flex flex-wrap gap-2">
             {["Launched in 9 days", "Automated reviews", "Mobile-first"].map((tag) => (
@@ -126,12 +129,12 @@ export default function Testimonials() {
             {hasReal ? "Client Stories" : "Straight Talk"}
           </p>
           <h2 id="proof-heading" className="text-4xl md:text-5xl font-bold text-[var(--color-canyon)] mb-4">
-            {hasReal ? "What our clients say." : "We're early — and that's good news for you."}
+            {hasReal ? "What our clients say." : "I'm early — and that's good news for you."}
           </h2>
           {!hasReal && (
             <p className="text-lg text-[var(--color-stone)] max-w-xl mx-auto">
-              No invented reviews here. Just an honest look at where we are and real,
-              live work you can click into.
+              No invented reviews here. Just an honest look at where I am and real,
+              live work you can click into and check for yourself.
             </p>
           )}
         </div>
